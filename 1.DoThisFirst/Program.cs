@@ -30,12 +30,34 @@ namespace _1.WarmUp.Easy
 
             // YOUR CODE GOES HERE :)
 
+            for (var i = 1; i <= 100; i++)
+            {
+                var message = i.ToString();
+                if(DivisibleBy(i, 3)) 
+                {
+                    message = "Sockeye";
+                }
+                if(DivisibleBy(i, 5))
+                {
+                    message = "Consulting";
+                }
+                if(DivisibleBy(i, 3) && DivisibleBy(i, 5)) 
+                {
+                    message = "Sockeye Consulting";
+                }
+                Console.WriteLine(message);
+            }
 
 
             Console.WriteLine("\r\n\r\nCompleted -- Press any key to quit");
 
 
             Console.ReadKey();
+        }
+
+        public static bool DivisibleBy(int number, int divisor)
+        {
+            return (number % divisor == 0);
         }
     }
 }
