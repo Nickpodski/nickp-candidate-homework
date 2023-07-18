@@ -1,6 +1,22 @@
-﻿@{
+﻿@model ResourceList
+
+@{
     ViewBag.Title = "Home Page";
 }
 
+@foreach (var list in @Model.SimpleList)
+{
+    <p>@string.Join(", ", list)</p>
+}
 
-Make sure you have fully read the readme file included in this project
+<br />
+<p>SimpleList Finished.</p>
+<br />
+
+@foreach (var list in @Model.HarderList)
+{
+    <p>@string.Join(", ", list)</p>
+}
+
+<br />
+<p>HarderList Finished.</p>
