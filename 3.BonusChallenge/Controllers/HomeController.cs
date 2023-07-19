@@ -14,8 +14,10 @@ namespace _3.BonusChallenge_1.Controllers
         {
             var ResourceList = new ResourceList
             {
-                SimpleList = Output(Data.SimpleList.AsEnumerable()),
-                HarderList = Output(Data.HarderList.AsEnumerable())
+                SimpleList = Data.SimpleList.AsEnumerable(),
+                SimpleListAnagramSorted = Output(Data.SimpleList.AsEnumerable()),
+                HarderList = Data.HarderList.AsEnumerable(),
+                HarderListAnagramSorted = Output(Data.HarderList.AsEnumerable())
             };
 
             return View(ResourceList);

@@ -2,12 +2,28 @@
     padding-top: 50px;
     padding-bottom: 20px;
     font-family: "arial";
-    color: #00000f;
-    background-color: #fffffe;
+    background: rgb(255,255,255);
+    background: -moz-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(222,128,13,1) 100%, rgba(2,0,36,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(222,128,13,1) 100%, rgba(2,0,36,1) 100%);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(222,128,13,1) 100%, rgba(2,0,36,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#020024",GradientType=1);
 }
 
 .body-content {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+nav {
+    box-sizing: border-box;
+    height: 5%;
+    position: relative;
+}
+
+.logo {
+    width: 30%;
+}
+
+
+
 

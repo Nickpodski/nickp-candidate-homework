@@ -4,19 +4,46 @@
     ViewBag.Title = "Home Page";
 }
 
-@foreach (var list in @Model.SimpleList)
-{
-    <p>@string.Join(", ", list)</p>
-}
+<nav>
+    <picture>
+        <img src="https://sockeyeconsulting.com/wp-content/uploads/2022/04/Sockeye-horizontal-color-REV.png" class="logo">
+    </picture>
+</nav>
 
 <br />
-<p>SimpleList Finished.</p>
-<br />
+<h3>List of simple strings to be sorted and checked for Anagrams.</h3>
 
-@foreach (var list in @Model.HarderList)
-{
-    <p>@string.Join(", ", list)</p>
-}
+<ul>
+        <li>@string.Join(", ", @Model.SimpleList)</li>
+</ul>
 
 <br />
-<p>HarderList Finished.</p>
+
+<ul>
+    @foreach (var list in @Model.SimpleListAnagramSorted)
+    {
+        <li>@string.Join(", ", list)</li>
+    }
+</ul>
+
+<br />
+<h5>SimpleList Finished.</h5>
+<br />
+
+<h3>List of harder strings to be sorted and checked for Anagrams.</h3>
+
+<ul>
+    <li>@string.Join(", ", @Model.HarderList)</li>
+</ul>
+
+<br />
+
+<ul>
+    @foreach (var list in @Model.HarderListAnagramSorted)
+    {
+        <li>@string.Join(", ", list)</li>
+    }
+</ul>
+
+<br />
+<h5>HarderList Finished.</h5>
